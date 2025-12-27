@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>destinasi liburan</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: cornsilk;
+    color: #333;
+}
+
+.wrapper {
+    width: 1100px;
+    margin: auto;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(90deg, #036bf1, #1e40af);
+    z-index: 10;
+    animation: fadeDown 1s ease;
+}
+
+nav .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo a {
+    font-size: 40px;
+    font-weight: 800;
+    font-family: Courier;
+    color: white;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    margin-left: 22px;
+}
+
+.menu ul li a {
+    color: rgba(255,255,255,0.85);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #FACC15;
+}
+
+/* BUTTON SIGN UP */
+.tbl-biru {
+    background: #3f72af;
+    padding: 10px 26px;
+    border-radius: 30px;
+    color: white;
+    transition: 0.3s;
+}
+
+.tbl-biru:hover {
+    background: #fc5185;
+    transform: scale(1.05);
+}
+
+/* ===== SECTION ===== */
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    margin: 100px 0;
+    animation: fadeUp 1.2s ease;
+}
+
+section img {
+    width: 45%;
+    max-width: 500px;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    transition: 0.5s;
+}
+
+section img:hover {
+    transform: scale(1.05);
+}
+
+.kolom {
+    width: 50%;
+}
+
+.kolom p {
+    line-height: 1.8;
+    font-size: 16px;
+    color: #555;
+}
+
+h2 {
+    font-family: 'Comic Sans MS';
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #255892;
+}
+
+/* ===== BUTTON PELAJARI ===== */
+a.tbl-pink {
+    display: inline-block;
+    background: linear-gradient(135deg, #5b7cfa, #2113e6);
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.4s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+a.tbl-pink:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(33,19,230,0.4);
+}
+
+/* ===== FOOTER ===== */
+#copyright {
+    text-align: center;
+    padding: 30px 0;
+    color: #777;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 991px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    section img {
+        width: 100%;
+    }
+
+    .kolom {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="wrapper">
+        <div class="logo"><a href="">liburan di jepang</a></div>
+        <div class="menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#akomoditas dan fasilitas">Fasilitas</a></li>
+                <li><a href="#lokasi">Lokasi</a></li>
+                <li><a href="#akses">Akses</a></li>
+                <li><a href="" class="tbl-biru">Sign Up</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="wrapper">
+
+<section id="home">
+    <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1666943475/blog/y51hhso1rgshzjputhzx.webp">
+    <div class="kolom">
+        <h2>1. Universal Studios Japan (Osaka)</h2>
+        <p>
+bersenang-senang di  adalah aktivitas yang enggak boleh kamu lewatkan saat wisata ke Jepang. 
+Biar acara seru-seruan kamu lebih praktis, pesan tiketmu lebih dulu lewat Klook. 
+Dengan cara ini, kamu bisa langsung masuk ke Universal Studios Japan tanpa perlu mengantre di loket penukaran.
+Cukup tunjukkan QR Code di ponsel pintar kamu dan bersenang-senanglah sepanjang hari!
+Puncak keramaian di Universal Studios Japan terjadi pada periode April sampai Mei dan saat liburan Obon pada pertengahan Juli.
+Jadi, kalau kamu enggak mau berurusan dengan keramaian yang terlalu padat, kamu bisa memilih alternatif waktu yang lain.
+        </p>
+        <p>
+            <a href="https://www.usj.co.jp/web/en/us" class="tbl-pink" target="_blank">
+                Pelajari Lebih Lanjut
+            </a>
+        </p>
+    </div>
+</section>
+
+<section id="akomoditas dan fasilitas">
+    <div class="kolom">
+        <h2>Fasilitas di universal studios</h2>
+        <p>
+Univer sal Express Pass: Mempercepat waktu antrean untuk atraksi.
+Child Switch: Memungkinkan orang tua bergantian menunggu anak di wahana yang tidak bisa diikuti anak.
+Ruang Ibu & Anak, Pusat Pertolongan Pertama: Tersedia untuk kenyamanan dan keamanan.
+Restoran: Beragam pilihan, bahkan menyediakan menu MPASI untuk bayi.
+Area Parkir: Tersedia untuk mobil, VIP, dan disabilitas.
+Ruang Salat: Ada ruangan khusus di Pusat Informasi untuk ibadah.
+Toko Suvenir: Banyak pilihan merchandise di akhir setiap area
+        </p>
+        <p>
+            <a href="https://www.usj.co.jp/web/en/us" class="tbl-pink" target="_blank">
+                Pelajari Lebih Lanjut
+            </a>
+        </p>
+    </div>
+    <img src="https://awsimages.detik.net.id/community/media/visual/2023/07/07/universal-studio-jepang-hadirkan-restoran-bertema-one-piece_169.webp?w=600&q=90">
+</section>
+
+<section id="lokasi">
+    <div class="kolom">
+        <h2>Lokasi universal studios</h2>
+        <p>
+Universal Studios Japan (USJ) yang terletak di Osaka, tepatnya di 2 Chome-1-33 Sakurajima, Ward Konohana.
+Taman hiburan ini sangat mudah diakses dari pusat kota Osaka dengan kereta api.
+        </p>
+    </div>
+</section>
+
+<section id="akses">
+    <div class="kolom">
+        <h2>Akses ke universal studios</h2>
+        <p>
+Untuk ke Universal Studios Japan (USJ) di Osaka, cara termudah adalah naik kereta JR ke Stasiun Universal City.
+        </p>
+    </div>
+</section>
+
+</div>
+
+<div id="copyright">
+&copy; 2025 <b>Universal Studios</b> All Rights Reserved <b>-Muhammad Marvel Ardiansyah Putra-</b>
+</div>
+
+</body>
+</html>
