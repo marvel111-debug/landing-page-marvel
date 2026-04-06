@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warung Makan</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        .navbar {
+            position: absolute;
+            width: 100%;
+            z-index: 10;
+            background: transparent !important;
+        }
+
+        .navbar .nav-link,
+        .navbar .navbar-brand {
+            color: white !important;
+            font-weight: 500;
+        }
+
+        .navbar .nav-link:hover {
+            color: #ffc107 !important;
+        }
+
+        
+        .produk-banner {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+            background-size: cover;
+            background-position: center;
+        }
+
+        
+        .kategori-box .list-group-item {
+            border-radius: 8px;
+            margin-bottom: 8px;
+            transition: 0.3s;
+        }
+
+        .kategori-box .list-group-item:hover {
+            background-color: #198754;
+            color: white;
+        }
+
+        .kategori-box .active {
+            background-color: #198754;
+            border: none;
+        }
+
+      
+        .product-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s ease;
+        }
+
+        .product-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimony {
+  background: linear-gradient(135deg, #e6f7ec, #cfeedd) !important; /* hijau muda kehijauan */
+}
+
+.testimony-card {
+  background: rgba(255, 255, 255, 0.85) !important; 
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(20, 83, 45, 0.12) !important;
+  border-radius: 16px;
+  padding: 28px;
+  transition: 0.3s ease;
+  height: 100%;
+}
+
+.testimony-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(20, 83, 45, 0.25);
+}
+
+.testimony-card .quote-icon {
+  font-size: 2rem;
+  color: rgba(20, 83, 45, 0.35);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.testimony-card h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #14532D;
+  margin-bottom: 4px;
+}
+
+.testimony-card .author {
+  font-size: 0.8rem;
+  color: #475569;
+  margin-bottom: 12px;
+}
+
+.testimony-card p {
+  font-size: 0.88rem;
+  color: #334155; 
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.testimony-card .stars {
+  color: #facc15;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+.testimony h2 {
+  color: #14532D !important;
+  font-weight: 800;
+}
+
+.testimony p.text-center {
+  color: #475569 !important;
+}
+
+.container-subscribe {
+  background-color: #2b2b2b;
+}
+
+.container-subscribe h5,
+.container-subscribe p {
+  color: #ffffff;
+}
+
+.social-icons a {
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffffff; 
+  transform: scale(1.2);
+}
+
+.subscribe-input {
+  border-radius: 6px 0 0 6px;
+  padding: 12px;
+}
+
+.subscribe-btn {
+  border-radius: 0 6px 6px 0;
+  padding: 12px 20px;
+  font-weight: 600;
+}
+
+.footer{
+  background-color: #595959;
+}
+ 
+.footer .social-icons{
+  font-size: 1.6rem;
+  color: #fff;
+  transition: .3s;
+}
+
+.footer .social-icons:hover{
+  color: #ffc107;
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Warung Makan</a>
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="produk.html">menu</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="promo.html">promo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="keranjang.html"><i class= "bi bi-cart"></i>keranjang</a>
+        </li>
+        
+      </ul>
+            <form class="d-flex">
+               <input type="text" class="form-control me-2" placeholder="pilih menu">
+               <button class="btn btn-warning text-light" type="button">
+                cari
+               </button>
+            </form> 
+
+        </div>
+    </div>
+</nav>
+
+    <!--baner-->
+    <div class="container-fluid produk-banner d-flex align-items-center justify-content-center">
+        <div class="text-center text-light">
+            <h1 class="display-4 fw-bold">Nikmati Hidangan Lezat Warung Makan Kami</h1>
+            <p class="lead">Rasa Rumahan, Harga Bersahabat</p>
+        </div>
+    </div>
+
+
+    <div class="container my-5">
+        <div class="row">          
+            <div class="col-md-3">
+                <h5 class="mb-3">Kategori</h5>
+                <div class="list-group kategori-box">
+                    <a href="#" class="list-group-item list-group-item-action active">Semua Menu</a>
+                    <a href="#" class="list-group-item list-group-item-action">Makanan Berat</a>
+                    <a href="#" class="list-group-item list-group-item-action">Minuman</a>
+                    <a href="#" class="list-group-item list-group-item-action">Snack</a>
+                </div>
+            </div>
+
+            <!-- Catalog -->
+            <div class="col-md-9">
+                <h5 class="mb-3">Daftar Menu</h5>
+                <div class="row g-4">
+
+                    
+
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="bakso1.jpeg" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h6 class="card-title">Bakso</h6>
+                                <p class="text-danger fw-bold">Rp 15.000</p>
+                                <button class="btn btn-success btn-sm">Tambah</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="Rawon1.jpeg" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h6 class="card-title">Rawon</h6>
+                                <p class="text-danger fw-bold">Rp 20.000</p>
+                                <button class="btn btn-success btn-sm">Tambah</button>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="lele.jpeg" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h6 class="card-title">pecel lele</h6>
+                                <p class="text-danger fw-bold">Rp 15.000</p>
+                                <button class="btn btn-success btn-sm">Tambah</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="rendang.jpeg" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h6 class="card-title">rendang</h6>
+                                <p class="text-danger fw-bold">Rp 25.000</p>
+                                <button class="btn btn-success btn-sm">Tambah</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="petek1.jpeg" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h6 class="card-title">Ayam Goreng</h6>
+                                <p class="text-danger fw-bold">Rp 15.000</p>
+                                <button class="btn btn-success btn-sm">Tambah</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="sego1.jpeg" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h6 class="card-title">nasi goreng</h6>
+                                <p class="text-danger fw-bold">Rp 15.000</p>
+                                <button class="btn btn-success btn-sm">Tambah</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--review -->
+<section class="testimony container-fluid py-5">
+<div class="container">
+<h2 class="text-center text-light mb-2">Apa Kata Customer</h2>
+<p class="text-center mb-5" style="color: rgba(225,225,225,.6); font-size:.95rem;">Kepuasan pelanggan adalah prioritas kami</p>
+
+<div class="row g-4">
+  <div class="col-sm-6 col-lg-4">
+    <div class="testimony-card">
+      <div class="quote-icon">"</div>
+      <h5>Makannya enak-enak</h5>
+      <div class="author">Panji Manusia Milenium</div>
+      <div class="stars">
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+      </div>
+      <p>Lorem ipsum dolor sit amet</p>
+    </div>
+  </div>
+
+<div class="col-sm-6 col-lg-4">
+<div class="testimony-card">
+  <div class="quote-icon">"</div>
+  <h5>Minumannya seger, banyak promo</h5>
+  <div class="author">Saras 008</div>
+  <div class="stars">
+    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+  </div>
+  <p>Lorem ipsum dolor sit amet</p>
+</div>
+</div>
+
+  <div class="col-sm-6 col-lg-4">
+<div class="testimony-card">
+<div class="quote-icon">"</div>
+<h5>Pelayanannya bagus</h5>
+<div class="author">Kapten Tsubasa</div>
+<div class="stars">
+   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+</div>
+<p>Lorem ipsum dolor sit amet</p>
+</div>
+  </div>
+
+<div class="col-sm-6 col-lg-4">
+<div class="testimony-card">
+  <div class="quote-icon">"</div>
+  <h5>Delivery-nya cepat</h5>
+  <div class="author">Power Ranger Merah</div>
+  <div class="stars">
+    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+  </div>
+  <p>Lorem ipsum dolor sit amet</p>
+</div>
+</div>
+
+<div class="col-sm-6 col-lg-4">
+  <div class="testimony-card">
+    <div class="quote-icon">"</div>
+    <h5>Tempatnya bersih</h5>
+    <div class="author">Satria Baja Hitam</div>
+    <div class="stars">
+       <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+    </div>
+    <p>Lorem ipsum dolor sit amet</p>
+  </div>
+</div>
+
+<div class="col-sm-6 col-lg-4">
+<div class="testimony-card">
+  <div class="quote-icon">"</div>
+  <h5>Take away nggak lama</h5>
+  <div class="author">Satria Baja Hitam</div>
+  <div class="stars">
+     <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+  </div>
+  <p>Lorem ipsum dolor sit amet</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- reservasi -->
+     <div class="container-fluid py-5">
+      <div class="container">
+        <h2 class="text-center">reservasi</h2>
+        <p class="text-center"> Jangan sampai kehabisan tempat. Reservasi sekarang !!</p>
+        
+        <form class="col-md-8 offset-md-2 col-lg-6 offset-lg-3 mt-5">
+          <div>
+            <label for="nama" class="form-tabel">Nama</label>
+            <input type="text" class="form-control" id="Nama">
+          </div>
+
+          <div>
+            <label for="nama" class="form-tabel">No. Kontak</label>
+            <input type="text" class="form-control" id="No. Kontak">
+          </div>
+
+          <div>
+            <label for="nama" class="form-tabel">Jumlah Meja</label>
+            <input type="number" class="form-control" id="Jumlah Meja">
+          </div>
+          <div class="mt-3">
+            <button class="btn btn-warning text-light w-100">Reservasi</button>
+          </div>
+        </form>
+      </div>
+     </div>
+
+<!--Subscribe -->
+ <div class="container-fluid py-5 footer">
+  <div class="container text-center">
+    <h5 class="text-center text-light mb-3">Temui Kami</h5>
+
+    <div class="social-icons d-flex justify-content-center mb-5" style="gap: 70px">
+      <a href="https://facebook.com/username" target="_blank" class="social-icon">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="https://instagram.com/username" target="_blank" class="social-icon"> 
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a href="https://twitter.com/username" target="_blank" class="social-icon">
+        <i class="bi bi-twitter"></i>
+      </a>
+      <a href="https://youtube.com/username" target="_blank" class="social-icon">
+        <i class="bi bi-youtube"></i>
+      </a>
+    </div>
+
+    <h5 class="text-center text-light mb-1">Subscribe</h5>
+    <p class="text-center text-muted mb-3">untuk informasi tentang promo</p>
+
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="input-group">
+          <input type="email" class="form-control" placeholder="Ketikkan email">
+          <button class="btn btn-warning text-light">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--  footer -->
+    <footer class="bg-dark text-light py-5" id="footer">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5 class="fw-bold mb-3">warung makan</h5>
+                    <p class="text-light small">Tempat makan nyamann</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5 class="fw-bold mb-3">Navigasi</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="produk.html" class="text-light text-decoration-none">Produk</a></li>
+                        <li><a href="promo.html" class="text-light text-decoration-none">Promo</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Keranjang</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Kontak</h5>
+                    <ul class="list-unstyled text-light small">
+                        <li class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i> Jl.Watudakon pulokulon kota mojokerto
+                        </li>
+                        <li class="mb-1"><i class="bi bi-telephone-fill me-2"></i> +6212345678</li>
+                        <li class="mb-1"><i class="bi bi-envelope-fill me-2"></i> warungmakan@email.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary mt-4 mb-3">
+            <p class="text-center text-light small mb-0">
+                &copy; 2026 Warung makan. All rights reserved.
+            </p>
+        </div>
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

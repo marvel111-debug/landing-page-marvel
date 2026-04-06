@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>warng makan</title>
+  <link rel="stylesheet" href="bootstrap-5.0.0-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>MyResto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css" rel="stylesheet">
+</head>
+<style>
+    .banner {
+    height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+    background-size: cover;
+    background-position: center;
+}
+.navbar {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     z-index: 10;
+     background: rgba(0, 0, 0, 0.4);
+     backdrop-filter: blur(5px);
+ }
+
+ .navbar .nav-link,
+ .navbar .navbar-brand {
+     color: white !important;
+ }
+
+ .navbar .nav-link:hover {
+     color: #ffc107 !important;
+ }
+
+
+.card img {
+    aspect-ratio: 3 / 4;
+}
+
+.serv {
+    background-color: rgb(227, 133, 17);
+}
+
+.icon-service {
+    width: 90px;
+    height: 90px;
+    border: solid #fff 2px;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.testimony {
+    background-color: rgb(221, 138, 35) !important;
+}
+
+.testimony-card {
+    background: rgb(250, 161, 52) !important;
+    border: 1px solid rgba(255, 255, 255, 0.205) !important;
+    border-radius: 16px;
+    padding: 28px;
+    transition: .3s;
+    height: 100%;
+}
+
+.testimony-card:hover {
+    transform: translateY(-6px);
+    background: rgb(255, 255, 255);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.testimony-card .quote-icon {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.testimony-card .author {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 12px;
+}
+
+.testimony-card p {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.testimony-card .stars {
+    color: #FFC107;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+}
+
+.footer {
+    background-color: #ffffff;
+}
+
+.footer .social-icon {
+    font-size: 1.6rem;
+    color: #fff;
+    transition: .3s;
+}
+
+.footer .social-icon:hover {
+    color: #FFC107
+}
+
+.footer {
+    background-color: #595959;
+}
+
+.hovered-card {
+    transition: 0.3s;
+}
+
+.hovered-card:hover {
+    transform: translateY(-5px);
+}
+
+.reservasi {
+   background-color: white;
+   height: 100vh;
+}
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Warung Makan</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="produk.html">menu</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="promo.html">promo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="keranjang.html"><i class= "bi bi-cart"></i>keranjang</a>
+        </li>
+</nav>
+
+
+    <main>
+        <div class="container-fluid banner d-flex align-items-center">
+            <div class="container">;">
+                <h1 class="text-light text-center display-3" style="font-weight :200;">Promo Sekarang</h1>
+                <h2 class=" mb-5 text-light text-center display-10" style="font-weight:80">Pilih beberapa promo murah dengan harga terjangkau</h2>
+            </div>
+        </div>
+    </main>
+
+    <!-- kategori -->
+    <section class="container-fluid py-5" style="padding-top: 100px; scroll-margin-top: 70px;" id="promo-list">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-sm-4 col-md-3 col-lg-2 mb-2">
+                    <div class="btn btn-outline-warning fs-5 w-100 filter-btn active" data-bs-target="semuaPromo">
+                        Semua Kategori
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-3 col-lg-2 mb-2">
+                    <div class="btn btn-outline-warning fs-5 w-100 filter-btn" data-bs-target="promoDiskon">
+                        Promo Diskon
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-3 col-lg-2 mb-2">
+                    <div class="btn btn-outline-warning fs-5 w-100 filter-btn" data-bs-target="promoBonus">
+                        Promo Bonus
+                    </div>
+                </div>
+            </div>
+            <div id="semuaPromo" class="promo-section">
+                <div class="row justify-content-start">
+                    <!-- card 1 -->
+                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
+                        <div class="card card-hover">
+                            <a href="Bakso urat jumbo.jpeg" data-lightbox="promo" data-title="bakso">
+                                <img src="Bakso urat jumbo.jpeg" class="card-img-top land" alt="bakso">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center text-warning mb-3 fw-bold">bakso</h5>
+                                <h1 class="text-center text-warning fw-bold fs-3">15.000k</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 2 -->
+                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
+                        <div class="card card-hover">
+                            <a href="nasi goreng.jpeg" data-lightbox="promo" data-title="nasi goreng">
+                                <img src="nasi goreng.jpeg" class="card-img-top land" alt="nasi goreng">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center text-warning mb-3 fw-bold">nasi goreng</h5>
+                                <h1 class="text-center text-warning fw-bold fs-3">15.000k</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 3 -->
+                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
+                        <div class="card card-hover">
+                            <a href="Pecel lele 🇲🇨_JAVA, INDONESIA.jpeg" data-lightbox="promo" data-title="pecel lele">
+                                <img src="Pecel lele 🇲🇨_JAVA, INDONESIA.jpeg" class="card-img-top land" alt="pecel lele">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center text-warning mb-3 fw-bold">pecel lele</h5>
+                                <h1 class="text-center text-warning fw-bold fs-3">10.000k</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card 4 -->
+                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
+                        <div class="card card-hover">
+                            <a href="ayam.jpeg" data-lightbox="promo" data-title="ayam">
+                                <img src="ayam.jpeg" class="card-img-top land" alt="ayam">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center text-warning mb-3 fw-bold">ayam goreng</h5>
+                                <h1 class="text-center text-warning fw-bold fs-3">15.000k</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 5 -->
+                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
+                        <div class="card card-hover">
+                            <a href="rawon3.jpeg" data-lightbox="promo" data-title="nasi rawon">
+                                <img src="rawon3.jpeg" class="card-img-top land" alt="nasi rawon">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center text-warning mb-3 fw-bold">nasi rawon</h5>
+                                <h1 class="text-center text-warning fw-bold fs-3">20.000k</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 6 -->
+                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
+                        <div class="card card-hover">
+                            <a href="rendang1.jpeg" data-lightbox="promo" data-title="rendang1">
+                                <img src="rendang1.jpeg" class="card-img-top land" alt="rendang1">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center text-warning mb-3 fw-bold">rendang</h5>
+                                <h1 class="text-center text-warning fw-bold fs-3">25.000k</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="promoDiskon" class="promo-section" style="display: none;">
+                <div class="row justify-content-start">
+                    <!-- card 1 -->
+                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
+                        <div class="card card-hover">
+                            <a href="Bakso urat jumbo.jpeg" data-lightbox="promo" data-title="bakso">
+                                <img src="Bakso urat jumbo.jpeg" class="card-img-top land" alt="bakso">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center text-warning mb-3 fw-bold">bakso</h5>
+                                <h1 class="text-center text-warning fw-bold fs-3">13.000k</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 2 -->
+                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
+                        <div class="card card-hover">
+                            <a href="ayam.jpeg" data-lightbox="promo" data-title="ayam">
+                                <img src="ayam.jpeg" class="card-img-top land" alt="ayam">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center text-warning mb-3 fw-bold">ayam goreng</h5>
+                                <h1 class="text-center text-warning fw-bold fs-3">13.000k</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 3 -->
+                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
+                        <div class="card card-hover">
+                            <a href="rendang1.jpeg" data-lightbox="promo" data-title="rendang1">
+                                <img src="rendang1.jpeg" class="card-img-top land" alt="rendang1">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center text-warning mb-3 fw-bold">rendang</h5>
+                                <h1 class="text-center text-warning fw-bold fs-3">20.000k</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 4 -->
+                   <div class="col-sm-6 col-lg-3 hovered-card mb-3">
+                        <div class="card card-hover">
+                            <a href="rawon3.jpeg" data-lightbox="promo" data-title="nasi rawon">
+                                <img src="rawon3.jpeg" class="card-img-top land" alt="nasi rawon">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center text-warning mb-3 fw-bold">nasi rawon</h5>
+                                <h1 class="text-center text-warning fw-bold fs-3">17.000k</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Section subscribe -->
+      <div class="container-fluid py-5 footer">
+        <div class="container">
+
+          <h5 class="text-center text-light mb-3">Temui Kami</h5>
+          <div class="d-flex justify-content-center mb-5" style="gap: 70px">
+            <a href="https://facebook.com/username" target="_blank" class="social-icon">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://instagram.com/username" target="_blank" class="social-icon">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://twitter.com/username" target="_blank" class="social-icon">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="https://youtube.com@username" target="_blank" class="social-icon">
+              <i class="bi bi-youtube"></i>
+            </a>
+          </div>
+          <h5 class="text-center text-light mb-1">Subscribe</h5>
+          <p class="text-center text-muted mb-3">untuk informasi tentang promo</p>
+
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <div class="input-group">
+                <input type="email" class="form-control" placeholder="Ketikan Email">
+                <button class="btn btn-warning text-light">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--penutup section subscribe-->
+
+      <footer class="bg-dark text-light py-5" id="footer">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5 class="fw-bold mb-3">warung makan</h5>
+                    <p class="text-light small">Tempat makan nyamann</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5 class="fw-bold mb-3">Navigasi</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="produk.html" class="text-light text-decoration-none">Produk</a></li>
+                        <li><a href="promo.html" class="text-light text-decoration-none">Promo</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Keranjang</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Kontak</h5>
+                    <ul class="list-unstyled text-light small">
+                        <li class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i> Jl.Watudakon pulokulon kota mojokerto
+                        </li>
+                        <li class="mb-1"><i class="bi bi-telephone-fill me-2"></i> +6212345678</li>
+                        <li class="mb-1"><i class="bi bi-envelope-fill me-2"></i> warungmakan@email.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary mt-4 mb-3">
+            <p class="text-center text-light small mb-0">
+                &copy; 2026 Warung makan. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const sectionIds = ['semuaPromo', 'promoDiskon', 'promoBonus'];
+
+        filterButtons.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var target = btn.getAttribute('data-bs-target').replace('#', '');
+
+                filterButtons.forEach(function(b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+
+                sectionIds.forEach(function(id) {
+                    var el = document.getElementById(id);
+                    if (id === target) {
+                        el.style.display = 'block';
+
+                        el.classList.remove('promo-section');
+                        void el.offsetWidth;
+                        el.classList.add('promo-section');
+                    } else {
+                        el.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
